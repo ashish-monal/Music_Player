@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/about_icon"
+        android:title="About" />
+
+    <item
+        android:id="@+id/nav_developer"
+        android:icon="@drawable/developer_icon"
+        android:title="Developer" />
+
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/setting_icon"
+        android:title="Setting" />
+
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/exit_icon"
+        android:title="Exit" />
+
+</menu>
