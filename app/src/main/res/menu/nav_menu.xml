@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_about"
+        android:id="@+id/nav_feedback"
         android:icon="@drawable/about_icon"
-        android:title="About" />
+        android:title="Feedback" />
 
     <item
         android:id="@+id/nav_developer"

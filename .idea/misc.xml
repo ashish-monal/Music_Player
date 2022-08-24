@@ -4,16 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/favorite_icon.xml" value="0.1885" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1365" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/music.xml" value="0.1365" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/next_icon.xml" value="0.1365" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/pause_icon.xml" value="0.1365" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/play_icon.xml" value="0.1365" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/playlist_icon.xml" value="0.1885" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/previous_icon.xml" value="0.1365" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/scroll_bar_icon.xml" value="0.1365" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/shuffle_icon.xml" value="0.1885" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/drawable/splash_screen.xml" value="0.1" />
-        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_favourite.xml" value="0.264" />
-        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_about.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_developer.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_favourite.xml" value="0.1" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_feedback.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_player.xml" value="0.2" />
-        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_playlist.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_playlist.xml" value="0.1" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_playlist_details.xml" value="0.264" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/activity_setting.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/add_playlist_dialog.xml" value="0.264" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/favourite_view.xml" value="0.2" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/fragment_now_playing.xml" value="0.4" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/music_recyclerview.xml" value="0.49622166246851385" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/nav_header.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/layout/playlist_view.xml" value="0.2" />
         <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/menu/nav_menu.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/AshishRanjan/AndroidStudioProjects/Ashish1/app/src/main/res/menu/search_view_menu.xml" value="0.21927083333333333" />
       </map>
     </option>
   </component>
@@ -22,5 +40,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.example.ashish1
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,7 +12,11 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.ashish1.databinding.MusicRecyclerviewBinding
 
 
-class MusicAdapter(private val context: Context, private val musicList: ArrayList<Music>) :
+class MusicAdapter(
+    private val context: Context,
+    private var musicList: ArrayList<Music>,
+    private var playlistDetails: Boolean = false
+) :
     RecyclerView.Adapter<MusicAdapter.MyHolder>() {
     class MyHolder(binding: MusicRecyclerviewBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -38,15 +43,51 @@ class MusicAdapter(private val context: Context, private val musicList: ArrayLis
         holder.duration.text = formatDuration(musicList[position].duration)
         Glide.with(context).load(musicList[position].artUri)
             .apply(RequestOptions().placeholder(R.drawable.music).centerCrop()).into(holder.image)
+        when{
+            playlistDetails ->{
+                holder.root.setOnClickListener {
+                    sendIntent(ref = "PlaylistDetailsAdapter", pos = position)
+                }
+
+            }
+            else ->{
+                holder.root.setOnClickListener {
+                    when{
+                        MainActivity.search -> sendIntent(ref = "MusicAdapterSearch", pos = position)
+                        musicList[position].id == PlayerActivity.nowPlayingId ->
+                            sendIntent(ref = "NowPlaying", pos = PlayerActivity.songPosition)
+                        else ->sendIntent(ref = "MusicAdapter", pos = position)
+                    }
+                }
+
+            }
+        }
         holder.root.setOnClickListener {
-            val intent = Intent(context, PlayerActivity::class.java)
-            intent.putExtra("index",position)
-            intent.putExtra("class","MusicAdapter")
-            ContextCompat.startActivity(context, intent, null)
+            when {
+                MainActivity.search -> sendIntent(ref = "MusicAdapterSearch", pos = position)
+                musicList[position].id == PlayerActivity.nowPlayingId ->
+                    sendIntent(ref = "NowPlaying", pos = PlayerActivity.songPosition)
+                else -> sendIntent(ref = "MusicAdapter", pos = position)
+            }
+
         }
     }
 
     override fun getItemCount(): Int {
         return musicList.size
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateMusicList(searchList: ArrayList<Music>) {
+        musicList = ArrayList()
+        musicList.addAll(searchList)
+        notifyDataSetChanged()
+    }
+
+    private fun sendIntent(ref: String, pos: Int) {
+        val intent = Intent(context, PlayerActivity::class.java)
+        intent.putExtra("index", pos)
+        intent.putExtra("class", ref)
+        ContextCompat.startActivity(context, intent, null)
     }
 }
