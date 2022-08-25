@@ -8,14 +8,22 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/nowPlaying">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,6 +66,18 @@
                     android:textAllCaps="false"
                     android:textColor="@color/black" />
 
+                <Button
+                    android:id="@+id/playNextBtn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/playlist_btn"
+                    android:drawableTop="@drawable/play_next_icon"
+                    android:text="@string/play_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
 
             </LinearLayout>
 
@@ -89,6 +109,7 @@
             android:name="com.example.ashish1.NowPlaying"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +117,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

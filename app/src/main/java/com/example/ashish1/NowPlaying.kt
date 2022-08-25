@@ -25,6 +25,7 @@ class NowPlaying : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //requireContext().theme.applyStyle(MainActivity.themeIndex,true)
         val view = inflater.inflate(R.layout.fragment_now_playing, container, false)
         binding = FragmentNowPlayingBinding.bind(view)
         binding.root.visibility = View.INVISIBLE
@@ -48,8 +49,8 @@ class NowPlaying : Fragment() {
         }
         binding.root.setOnClickListener {
             val intent = Intent(requireContext(), PlayerActivity::class.java)
-            intent.putExtra("index",PlayerActivity.songPosition)
-            intent.putExtra("class","NowPlaying")
+            intent.putExtra("index", PlayerActivity.songPosition)
+            intent.putExtra("class", "NowPlaying")
             ContextCompat.startActivity(requireContext(), intent, null)
         }
         return view
@@ -73,20 +74,16 @@ class NowPlaying : Fragment() {
     }
 
     private fun playMusic() {
+        PlayerActivity.isPlaying = true
         PlayerActivity.musicService!!.mediaPlayer!!.start()
         binding.playPauseBtnNP.setIconResource(R.drawable.pause_icon)
         PlayerActivity.musicService!!.showNotification(R.drawable.pause_icon)
-        PlayerActivity.binding.nextBtn.setImageResource(R.drawable.pause_icon)
-        PlayerActivity.isPlaying = true
     }
 
     private fun pauseMusic() {
+        PlayerActivity.isPlaying = false
         PlayerActivity.musicService!!.mediaPlayer!!.pause()
         binding.playPauseBtnNP.setIconResource(R.drawable.play_icon)
         PlayerActivity.musicService!!.showNotification(R.drawable.play_icon)
-        PlayerActivity.binding.nextBtn.setImageResource(R.drawable.play_icon)
-        PlayerActivity.isPlaying = false
     }
-
-
 }

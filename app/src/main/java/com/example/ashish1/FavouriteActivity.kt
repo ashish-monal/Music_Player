@@ -14,6 +14,7 @@ class FavouriteActivity : AppCompatActivity() {
 
     companion object{
         var favouriteSongs : ArrayList<Music> = ArrayList()
+        var favouritesChanged:Boolean = false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,17 +22,22 @@ class FavouriteActivity : AppCompatActivity() {
         setTheme(R.style.coolPink)
         binding = ActivityFavouriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        favouriteSongs = checkPlaylist(favouriteSongs)
 
+        favouriteSongs = checkPlaylist(favouriteSongs)
         binding.backBnFA.setOnClickListener { finish() }
         binding.favouriteRv.setHasFixedSize(true)
         binding.favouriteRv.setItemViewCacheSize(13)
         binding.favouriteRv.layoutManager = GridLayoutManager(this,4)
         adapter = FavouriteAdapter(this, favouriteSongs)
         binding.favouriteRv.adapter = adapter
+        favouritesChanged = false
+
         if(favouriteSongs.size <1)
         {
             binding.shuffleBtnFA.visibility = View.INVISIBLE
+        }
+        if (favouriteSongs.isNotEmpty()){
+            binding.instructionFV.visibility = View.GONE
         }
         binding.shuffleBtnFA.setOnClickListener {
             val intent = Intent(this, PlayerActivity::class.java)

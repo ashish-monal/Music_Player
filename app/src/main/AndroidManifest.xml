@@ -21,6 +21,12 @@
         android:theme="@style/splash_screen"
         tools:targetApi="31">
         <activity
+            android:name=".PlayNext"
+            android:exported="false" />
+        <activity
+            android:name=".SelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".FeedbackActivity"
             android:exported="false" />
         <activity

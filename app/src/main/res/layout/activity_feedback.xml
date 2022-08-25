@@ -13,30 +13,30 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_margin="15dp"
-        android:padding="16dp"
         android:gravity="center|start"
         android:hint="@string/topic_feedback"
-        android:inputType="textEmailSubject" />
+        android:inputType="textEmailSubject"
+        android:padding="16dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/emailFA"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_margin="15dp"
-        android:padding="16dp"
         android:gravity="center|start"
         android:hint="@string/email_feedback"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:padding="16dp" />
 
     <com.google.android.material.textfield.TextInputEditText
 
         android:id="@+id/feedbackMsgFA"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_margin="15dp"
-        android:padding="16dp"
         android:gravity="center|start"
-        android:hint="@string/feedback" />
+        android:hint="@string/feedback"
+        android:padding="16dp" />
 
     <Button
         android:id="@+id/sendBtnFA"
@@ -45,8 +45,8 @@
         android:layout_gravity="center"
         android:layout_margin="15dp"
         android:backgroundTint="@color/white"
-        android:text="@string/send"
         android:padding="16dp"
+        android:text="@string/send"
         android:textColor="@color/black" />
 
 </LinearLayout>

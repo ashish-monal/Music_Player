@@ -15,15 +15,15 @@ import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
 
 class FeedbackActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityFeedbackBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.coolPinkNav)
         binding = ActivityFeedbackBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.title = "Feedback"
-
-
         binding.sendBtnFA.setOnClickListener {
             val feedbackMsg =
                 binding.feedbackMsgFA.text.toString() + "\n" + binding.emailFA.text.toString()
@@ -51,24 +51,17 @@ class FeedbackActivity : AppCompatActivity() {
                         mail.setFrom(InternetAddress(userName))
                         mail.setRecipients(
                             javax.mail.Message.RecipientType.TO,
-                            InternetAddress.parse(userName)
-                        )
+                            InternetAddress.parse(userName))
                         Transport.send(mail)
-                        Toast.makeText(
-                            this,
-                            "Thank you for your valuable Feedback",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        finish()
                     } catch (e: Exception) {
                         Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }.start()
+                Toast.makeText(this,"Thank you for your Feedback",Toast.LENGTH_SHORT).show()
+                finish()
             } else {
                 Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show()
             }
-
-            Toast.makeText(this, "Feedback Message", Toast.LENGTH_SHORT).show()
         }
     }
 }

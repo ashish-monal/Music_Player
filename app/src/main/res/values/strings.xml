@@ -41,4 +41,16 @@
     <string name="music_player_is_an_very_popular_free_music_playing_app_for_android_users_it_is_equipped_with_a_powerful_search_feature_which_enables_you_to_easily_and_quickly_scan_all_your_all_files_and_music_on_android_phone_moreover_you_are_allowed_to_change_music_player_themes_and_background_skin_in_addition_there_is_an_unique_equalizer_22_pre_set_music_tone_styles_designed_in_this_music_player_for_android_it_offers_you_a_more_professional_sound">Music Player is an very popular free music playing app for Android users. It is equipped with a powerful search feature which enables you to easily and quickly scan all your all files and music on Android phone. Moreover, you are allowed to change music player themes and background skin. In addition, there is an unique equalizer (22+ pre-set music tone styles) designed in this music player for Android. It offers you a more professional sound.</string>
     <string name="feedback">Feedback</string>
     <string name="send">send</string>
+    <string name="version_name">Version Name</string>
+    <string name="sort_by">Sort By</string>
+    <string name="set_theme">Set Theme</string>
+    <string name="search_song">Search Song</string>
+    <string name="playlist_note">Tip: Click on + to Create New Playlist</string>
+    <string name="play_next">Play Next</string>
+    <string name="playlist_btn">Playlist Button</string>
+    <string name="play_next_note">Tip: Long Press On Any music To Add It Into Play Next. &#128522;</string>
+    <string name="favourite_note">Tip: Play Music And Click On &#10084; To Add It Into Favourites</string>
+    <string name="back_btn">Back</string>
+    <string name="about">About</string>
+    <string name="sound">Sound</string>
 </resources>
